@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MD Arefin Islam Ramin – Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0057b8;
+      --text: #222;
+      --muted: #555;
+      --bg: #fff;
+      --border: #e5e5e5;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.55;
+      color: var(--text);
+      background: var(--bg);
+      padding: 2rem 1rem;
+    }
+    a { 
+      color: var(--primary); 
+      text-decoration: none;
+      position: relative;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    ul { padding-left: 1.2rem; }
+    li + li { margin-top: 0.25rem; }
+    h1, h2, h3 { font-weight: 600; color: var(--primary); }
+    h1 { font-size: 2.2rem; margin-bottom: 0.2rem; }
+    h2 { font-size: 1.3rem; margin: 1.4rem 0 0.6rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: var(--bg);
+      padding: 2rem 2.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+      border-radius: 6px;
+    }
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .header .left .title {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+    .header .right {
+      text-align: right;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .job {
+      margin-bottom: 1rem;
+    }
+    .job .where {
+      font-weight: 600;
+    }
+    .job .when {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .skills span {
+      background: #f1f5fa;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    @media (max-width: 600px) {
+      body { padding: 1rem 0.5rem; }
+      .container { padding: 1.5rem 1rem; }
+      .two-col { grid-template-columns: 1fr; }
+      .header { flex-direction: column; align-items: flex-start; }
+      .header .right { text-align: left; }
+    }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .container { box-shadow: none; padding: 0; }
+      a { color: var(--text); text-decoration: none; }
+    }
+    sup { top: -0.25em; font-size: 0.8em; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="left">
+        <h1>MD Arefin Islam Ramin</h1>
+        <div class="title">Software Engineering Undergraduate</div>
+      </div>
+      <div class="right">
+        Yangzijin Campus, Yangzhou University<br>
+        Hanjiang, Jiangsu, China<br>
+        +86 182 5271 2143 || +88 015 8115 4672 <br>
+        <a href="mailto:arefinraminz@gmail.com">arefinraminz@gmail.com</a>
+      </div>
+    </header>
+
+    <!-- PROFILE -->
+    <section>
+      <h2>Profile</h2>
+      <p>
+        Motivated Software Engineering undergraduate at Yangzhou University with strong expertise in Python-based backend development and hands-on experience building full-stack web applications using Django. Proven ability to design secure, scalable systems through projects such as a complete food delivery management platform. Passionate about machine learning and artificial intelligence, with research interests focused on AI-driven healthcare analytics and intelligent security systems. Adept at translating software requirements into robust technical solutions, with a solid foundation in algorithms, databases, and system architecture. Seeking opportunities to grow as a backend-focused engineer while contributing to impactful AI-powered applications.
+      </p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+      <h2>Education</h2>
+      <div class="job">
+        <div class="where">Yangzhou University — Bachelor of Science in Software Engineering</div>
+        <div class="when">September, 2022 - June, 2026 | GPA: 3.37 (82.1% average) till 7<sup>th</sup> semester</div>
+      </div>
+      <div class="job">
+        <div class="where">Chittagong Port College — Higher Secondary School Certificate in Science</div>
+        <div class="when">July, 2018 – August, 2020 | GPA: 4.83</div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <h2>Skills</h2>
+      <div class="two-col">
+        <div>
+          <h3>Programming Skills</h3>
+          <div class="skills">
+            <span>Python</span><span>Java</span><span>JavaScript</span><span>C</span><span>C++</span><span>C#</span><span>HTML</span><span>CSS</span><span>SQL</span><span>Dart</span>
+          </div>
+        </div>
+        <div>
+          <h3>Web Development</h3>
+          <div class="skills">
+            <span>JSP</span><span>Servlet</span><span>ASP.NET</span><span>Node.js</span><span>MySQL</span>
+          </div>
+        </div>
+        <div>
+          <h3>Frameworks & Libraries</h3>
+          <div class="skills">
+            <span>Django</span><span>Flutter</span><span>.NET Framework</span><span>ASP.NET</span>
+          </div>
+        </div>
+        <div>
+          <h3>Database & Backend</h3>
+          <div class="skills">
+            <span>MySQL</span><span>SQL</span><span>Node.js</span>
+          </div>
+        </div>
+        <div>
+          <h3>Graphics & Media Tools</h3>
+          <div class="skills">
+            <span>Canva</span><span>Adobe Illustrator</span><span>Figma</span>
+          </div>
+        </div>
+        <div>
+          <h3>Languages</h3>
+          <div class="skills">
+            <span>Bengali (Native)</span><span>English (Fluent)</span><span>Chinese (Advanced)-HSK4 passed with 207 marks</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- RESEARCH INTERESTS -->
+    <section>
+      <h2>Research Interests (Planned)</h2>
+      <ul>
+        <li><strong>AI-Powered Sleep Pattern Analysis for Early Detection of Neurological Disorders (ongoing):</strong> Exploring the use of machine learning and Python-based tools (e.g., TensorFlow, PyTorch) to analyze sleep data from wearable sensors and detect early signs of neurological conditions like Parkinson’s and Alzheimer’s.</li>
+        <li><strong>Python-Based Intrusion Detection System for Web Application Security:</strong> Designing a lightweight IDS using Python and machine learning to monitor behavioral patterns and detect unauthorized access or abnormal activities in real-time web applications.</li>
+      </ul>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Food Delivery Management System</strong> – Python & Django: A full-stack food delivery system with secure user authentication and password hashing.</li>
+        <li><strong>Supermarket Management System</strong> – C# & ASP.NET: Developed a desktop-based supermarket management application using C# with ASP.NET framework.</li>
+        <li><strong>Hospital Management System</strong> – J2EE: Web-based system for managing hospital; using Java EE technologies.</li>
+        <li><strong>University Management System</strong> – C++ (QT Creator): One of my earliest software projects a desktop system built in C++ using the Qt framework to manage University.</li>
+        <li><strong>Employee Management System</strong> – C: My first project in software engineering. A basic terminal-based application for managing employee records (ID, name, salary), developed in C as an introduction to structured programming.</li>
+      </ul>
+    </section>
+
+    <!-- HONORS & AWARDS -->
+    <section>
+      <h2>Honors & Awards</h2>
+      <ul>
+        <li>Second Prize at Chinese National Level – China Collegiate Computing Design Competition (National Level), July-August 2024 (17<sup>th</sup> Edition) | For the project “Chaohuo East: Intelligent Chinese Language Exchange Platform”</li>
+        <li>Second Prize at Jiangsu Province Level – China Collegiate Computing Design Competition (Jiangsu Provincial Level), May 2024 (11<sup>th</sup> Edition)</li>
+        <li>First Prize at University Level – Yangzhou University Selection Round, April 2024 (Internal University competition)</li>
+        <li>First Prize at University – 21<sup>st</sup> “Sound of Spring” Club – Parade Aesthetic Education Activity at Yangzhou University, September 2024 | For the Sixth String Music “MixBuzz” Team | Awarded by the Communist Youth League Yangzhou University Committee</li>
+        <li>Certificate of Appreciation – Government of the People’s Republic of Bangladesh, 2021 | For contributions as a volunteer of Corona Medicine Bank in the COVID-19 vaccination program at Chattogram 250 Bedded General Hospital, Chattogram.</li>
+      </ul>
+    </section>
+
+    <!-- VOLUNTEERING & EXPERIENCE -->
+    <section>
+      <h2>Volunteering & Experience</h2>
+      <ul>
+        <li><strong>President Advisor</strong> – Leo Club of Chittagong Karnaphuli Elite (July 2024-June 2025): A voluntary service organization which mainly focuses to work on Vision, Hunger, Eyesight, Diabetes and Childhood Cancer.</li>
+        <li><strong>Secretary</strong> – Kattali Youth Council (July 2022-June 2023): Empowers and engages local youth through community projects, education initiatives, and advocacy efforts, fostering positive change in the Kattali area.</li>
+        <li><strong>Assistant Organizing Secretary</strong> – Cubing Chittagong (August 2019-Present): An organization to promote Rubik’s Cube in Chittagong; organize competitions/events and foster a local community of Cube enthusiasts.</li>
+        <li><strong>Member</strong> – Bangla Tigers FC (2023-Present): Football Club at Yangzhou University | Participated in training and competitions.</li>
+      </ul>
+    </section>
+
+    <!-- REFERENCES -->
+    <section>
+      <h2>References</h2>
+      <div class="two-col">
+        <div>
+          <p><strong>Xiangjian Chen</strong><br>
+          Associate Professor<br>
+          School of Information Engineering and Artificial Intelligence<br>
+          Yangzhou University<br>
+          Phone: +86 177 5136 0234<br>
+          <a href="mailto:cxj831209@163.com">cxj831209@163.com</a></p>
+        </div>
+        <div>
+          <p><strong>Wu Xiaoxue</strong><br>
+          Associate Professor<br>
+          School of Information Engineering and Artificial Intelligence<br>
+          Yangzhou University<br>
+          Phone: +86 153 1945 9671<br>
+          <a href="mailto:xiaoxuewu@yzu.edu.cn">xiaoxuewu@yzu.edu.cn</a></p>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
