@@ -1,252 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MD Arefin Islam Ramin – Resume</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #0057b8;
-      --text: #222;
-      --muted: #555;
-      --bg: #fff;
-      --border: #e5e5e5;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      line-height: 1.55;
-      color: var(--text);
-      background: var(--bg);
-      padding: 2rem 1rem;
-    }
-    a { 
-      color: var(--primary); 
-      text-decoration: none;
-      position: relative;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    ul { padding-left: 1.2rem; }
-    li + li { margin-top: 0.25rem; }
-    h1, h2, h3 { font-weight: 600; color: var(--primary); }
-    h1 { font-size: 2.2rem; margin-bottom: 0.2rem; }
-    h2 { font-size: 1.3rem; margin: 1.4rem 0 0.6rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: var(--bg);
-      padding: 2rem 2.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,.08);
-      border-radius: 6px;
-    }
-    .header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-    .header .left .title {
-      font-size: 1rem;
-      color: var(--muted);
-      margin-top: 0.2rem;
-    }
-    .header .right {
-      text-align: right;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-    }
-    .job {
-      margin-bottom: 1rem;
-    }
-    .job .where {
-      font-weight: 600;
-    }
-    .job .when {
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    .skills span {
-      background: #f1f5fa;
-      padding: 0.25rem 0.6rem;
-      border-radius: 4px;
-      font-size: 0.85rem;
-    }
-    @media (max-width: 600px) {
-      body { padding: 1rem 0.5rem; }
-      .container { padding: 1.5rem 1rem; }
-      .two-col { grid-template-columns: 1fr; }
-      .header { flex-direction: column; align-items: flex-start; }
-      .header .right { text-align: left; }
-    }
-    @media print {
-      body { background: #fff; padding: 0; }
-      .container { box-shadow: none; padding: 0; }
-      a { color: var(--text); text-decoration: none; }
-    }
-    sup { top: -0.25em; font-size: 0.8em; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MD Arefin Islam Ramin | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+font-family:'Inter',sans-serif;
+background:#0f172a;
+color:#f8fafc;
+line-height:1.7;
+overflow-x:hidden;
+/* subtle animated background gradient */
+background: linear-gradient(-45deg, #0f172a,#10203b,#0b1429,#152742);
+background-size:400% 400%;
+animation: bgGradientShift 18s ease infinite;
+}
+@keyframes bgGradientShift{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+.container{max-width:1200px;margin:auto;padding:0 24px}
+nav{
+position:sticky;top:0;
+backdrop-filter:blur(12px);
+background:rgba(15,23,42,.8);
+border-bottom:1px solid rgba(255,255,255,.08);
+z-index:100;
+transition: all 0.3s ease;
+}
+/* Navbar scroll shrink effect */
+nav.scrolled{
+background:rgba(15,23,42,0.95);
+box-shadow:0 4px 22px rgba(56,189,248,0.08);
+}
+nav .container{
+display:flex;justify-content:space-between;align-items:center;
+padding:18px 24px;
+transition: padding 0.3s ease;
+}
+nav.scrolled .container{
+padding:14px 24px;
+}
+nav a{
+color:#cbd5e1;text-decoration:none;margin-left:20px;
+position:relative;
+transition:color 0.3s ease;
+}
+nav a::after{
+content:"";
+width:0%;
+height:2px;
+background:#38bdf8;
+position:absolute;
+left:0;
+bottom:-4px;
+transition:0.3s width ease;
+}
+nav a:hover{color:#38bdf8}
+nav a:hover::after{width:100%}
+.hero{
+min-height:90vh;
+display:flex;align-items:center;
+padding:40px 0;
+}
+.hero-grid{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:50px;
+align-items:center;
+}
+.gradient{
+background:linear-gradient(90deg,#38bdf8,#818cf8);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-size:200% auto;
+animation:textGradientAnim 3s linear infinite;
+}
+@keyframes textGradientAnim{
+to{background-position:200% center}
+}
+h1{font-size:4rem;line-height:1.1;font-weight:800}
+.subtitle{font-size:1.3rem;color:#94a3b8;margin:15px 0}
+.hero p{color:#cbd5e1}
+.btns{margin-top:25px}
+.btn{
+display:inline-block;
+padding:12px 22px;
+border-radius:12px;
+text-decoration:none;
+margin-right:10px;
+font-weight:600;
+transition:all 0.3s ease;
+position:relative;
+overflow:hidden;
+}
+.primary{
+background:#38bdf8;color:#08111f;
+box-shadow:0 0 18px rgba(56,189,248,0.25);
+}
+.primary:hover{
+transform:translateY(-4px);
+box-shadow:0 0 28px rgba(56,189,248,0.45);
+}
+.secondary{border:1px solid rgba(255,255,255,.15);color:white}
+.secondary:hover{
+border-color:#38bdf8;
+background:rgba(56,189,248,0.08);
+transform:translateY(-4px);
+}
+.photo{
+width:320px;height:320px;
+border-radius:24px;
+overflow:hidden;
+border:2px solid rgba(255,255,255,.12);
+margin:auto;
+/* floating avatar animation */
+animation: floatAvatar 5s ease-in-out infinite;
+box-shadow:0 10px 35px rgba(56,189,248,0.15);
+}
+@keyframes floatAvatar{
+0%,100%{transform:translateY(0px)}
+50%{transform:translateY(-16px)}
+}
+.photo img{
+width:100%;height:100%;object-fit:cover;
+transition:transform 0.5s ease;
+}
+.photo:hover img{transform:scale(1.06)}
+.section{padding:80px 0;opacity:0;transform:translateY(36px);transition:0.7s ease-out;}
+/* scroll active animation class added via JS */
+.section.active{opacity:1;transform:translateY(0)}
+.section h2{
+font-size:2rem;
+margin-bottom:25px;
+}
+.card{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:20px;
+padding:24px;
+transition:.3s all ease;
+position:relative;
+overflow:hidden;
+}
+.card::before{
+content:"";
+position:absolute;
+top:0;left:-100%;
+width:100%;height:100%;
+background:linear-gradient(90deg,transparent,rgba(56,189,248,0.07),transparent);
+transition:0.5s left ease;
+}
+.card:hover::before{left:100%}
+.card:hover{
+transform:translateY(-6px);
+border-color:rgba(56,189,248,0.22);
+box-shadow:0 12px 32px rgba(56,189,248,0.09);
+}
+.grid-3{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+}
+.grid-2{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:24px;
+}
+.skill{
+display:inline-block;
+padding:8px 14px;
+background:#1e293b;
+border-radius:999px;
+margin:6px;
+transition:all 0.3s ease;
+border:1px solid transparent;
+}
+.skill:hover{
+border-color:#38bdf8;
+background:rgba(56,189,248,0.1);
+transform:scale(1.06);
+}
+footer{
+text-align:center;
+padding:40px;
+color:#94a3b8;
+border-top:1px solid rgba(255,255,255,0.06);
+margin-top:30px;
+}
+/* Preloader CSS */
+.preloader{
+position:fixed;
+inset:0;
+background:#0f172a;
+z-index:9999;
+display:flex;
+align-items:center;justify-content:center;
+transition:opacity 0.6s ease, visibility 0.6s ease;
+}
+.preloader.hide{opacity:0;visibility:hidden;pointer-events:none;}
+.load-circle{
+width:55px;height:55px;
+border:4px solid rgba(56,189,248,0.15);
+border-top-color:#38bdf8;
+border-radius:50%;
+animation:spinLoader 1s linear infinite;
+}
+@keyframes spinLoader{to{transform:rotate(360deg)}}
+
+@media(max-width:900px){
+.hero-grid,.grid-2,.grid-3{grid-template-columns:1fr}
+h1{font-size:2.6rem}
+.photo{width:260px;height:260px}
+nav .container{flex-direction:column;gap:12px;text-align:center}
+nav div{margin-top:10px}
+nav a{margin:0 10px}
+}
+</style>
 </head>
 <body>
-  <div class="container">
-    <!-- HEADER -->
-    <header class="header">
-      <div class="left">
-        <h1>MD Arefin Islam Ramin</h1>
-        <div class="title">Software Engineering Undergraduate</div>
-      </div>
-      <div class="right">
-        Yangzijin Campus, Yangzhou University<br>
-        Hanjiang, Jiangsu, China<br>
-        +86 182 5271 2143 || +88 015 8115 4672 <br>
-        <a href="mailto:arefinraminz@gmail.com">arefinraminz@gmail.com</a>
-      </div>
-    </header>
+<!-- Page Preloader -->
+<div class="preloader">
+<div class="load-circle"></div>
+</div>
 
-    <!-- PROFILE -->
-    <section>
-      <h2>Profile</h2>
-      <p>
-        Motivated Software Engineering undergraduate at Yangzhou University with strong expertise in Python-based backend development and hands-on experience building full-stack web applications using Django. Proven ability to design secure, scalable systems through projects such as a complete food delivery management platform. Passionate about machine learning and artificial intelligence, with research interests focused on AI-driven healthcare analytics and intelligent security systems. Adept at translating software requirements into robust technical solutions, with a solid foundation in algorithms, databases, and system architecture. Seeking opportunities to grow as a backend-focused engineer while contributing to impactful AI-powered applications.
-      </p>
-    </section>
+<nav id="mainNav">
+<div class="container">
+<h3 class="gradient">Arefin Ramin</h3>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#research">Research</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
 
-    <!-- EDUCATION -->
-    <section>
-      <h2>Education</h2>
-      <div class="job">
-        <div class="where">Yangzhou University — Bachelor of Science in Software Engineering</div>
-        <div class="when">September, 2022 - June, 2026 | GPA: 3.37 (82.1% average) till 7<sup>th</sup> semester</div>
-      </div>
-      <div class="job">
-        <div class="where">Chittagong Port College — Higher Secondary School Certificate in Science</div>
-        <div class="when">July, 2018 – August, 2020 | GPA: 4.83</div>
-      </div>
-    </section>
+<section class="hero">
+<div class="container hero-grid">
 
-    <!-- SKILLS -->
-    <section>
-      <h2>Skills</h2>
-      <div class="two-col">
-        <div>
-          <h3>Programming Skills</h3>
-          <div class="skills">
-            <span>Python</span><span>Java</span><span>JavaScript</span><span>C</span><span>C++</span><span>C#</span><span>HTML</span><span>CSS</span><span>SQL</span><span>Dart</span>
-          </div>
-        </div>
-        <div>
-          <h3>Web Development</h3>
-          <div class="skills">
-            <span>JSP</span><span>Servlet</span><span>ASP.NET</span><span>Node.js</span><span>MySQL</span>
-          </div>
-        </div>
-        <div>
-          <h3>Frameworks & Libraries</h3>
-          <div class="skills">
-            <span>Django</span><span>Flutter</span><span>.NET Framework</span><span>ASP.NET</span>
-          </div>
-        </div>
-        <div>
-          <h3>Database & Backend</h3>
-          <div class="skills">
-            <span>MySQL</span><span>SQL</span><span>Node.js</span>
-          </div>
-        </div>
-        <div>
-          <h3>Graphics & Media Tools</h3>
-          <div class="skills">
-            <span>Canva</span><span>Adobe Illustrator</span><span>Figma</span>
-          </div>
-        </div>
-        <div>
-          <h3>Languages</h3>
-          <div class="skills">
-            <span>Bengali (Native)</span><span>English (Fluent)</span><span>Chinese (Advanced)-HSK4 passed with 207 marks</span>
-          </div>
-        </div>
-      </div>
-    </section>
+<div>
+<h1 class="gradient">MD Arefin Islam Ramin</h1>
+<div class="subtitle">Software Engineer • Backend Developer • AI Researcher</div>
 
-<!-- RESEARCH INTERESTS -->
-    <section>
-      <h2>Research Interests (Planned)</h2>
-      <ul>
-        <li><strong>AI-Powered Sleep Pattern Analysis for Early Detection of Neurological Disorders (ongoing):</strong> Exploring the use of machine learning and Python-based tools (e.g., TensorFlow, PyTorch) to analyze sleep data from wearable sensors and detect early signs of neurological conditions like Parkinson’s and Alzheimer’s.</li>
-        <li><strong>Python-Based Intrusion Detection System for Web Application Security:</strong> Designing a lightweight IDS using Python and machine learning to monitor behavioral patterns and detect unauthorized access or abnormal activities in real-time web applications.</li>
-      </ul>
-    </section>
+<p>
+Software Engineering graduate from Yangzhou University with expertise in backend development,
+full-stack web applications, machine learning, biomedical signal processing, and intelligent healthcare systems.
+Developer of production-grade Django applications and researcher in ECG signal classification using deep learning.
+</p>
 
-    <!-- PROJECTS -->
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Food Delivery Management System</strong> – Python & Django: A full-stack food delivery system with secure user authentication and password hashing.</li>
-        <li><strong>Supermarket Management System</strong> – C# & ASP.NET: Developed a desktop-based supermarket management application using C# with ASP.NET framework.</li>
-        <li><strong>Hospital Management System</strong> – J2EE: Web-based system for managing hospital; using Java EE technologies.</li>
-        <li><strong>University Management System</strong> – C++ (QT Creator): One of my earliest software projects a desktop system built in C++ using the Qt framework to manage University.</li>
-        <li><strong>Employee Management System</strong> – C: My first project in software engineering. A basic terminal-based application for managing employee records (ID, name, salary), developed in C as an introduction to structured programming.</li>
-      </ul>
-    </section>
+<div class="btns">
+<!-- Fixed Resume Download link pointing to your uploaded CV PDF -->
+<a class="btn primary" href="./CV of Arefin Islam Ramin.pdf" download>Download Resume</a>
+<a class="btn secondary" href="https://github.com/raminyzu" target="_blank">GitHub</a>
+</div>
+</div>
 
-    <!-- HONORS & AWARDS -->
-    <section>
-      <h2>Honors & Awards</h2>
-      <ul>
-        <li>Second Prize at Chinese National Level – China Collegiate Computing Design Competition (National Level), July-August 2024 (17<sup>th</sup> Edition) | For the project “Chaohuo East: Intelligent Chinese Language Exchange Platform”</li>
-        <li>Second Prize at Jiangsu Province Level – China Collegiate Computing Design Competition (Jiangsu Provincial Level), May 2024 (11<sup>th</sup> Edition)</li>
-        <li>First Prize at University Level – Yangzhou University Selection Round, April 2024 (Internal University competition)</li>
-        <li>First Prize at University – 21<sup>st</sup> “Sound of Spring” Club – Parade Aesthetic Education Activity at Yangzhou University, September 2024 | For the Sixth String Music “MixBuzz” Team | Awarded by the Communist Youth League Yangzhou University Committee</li>
-        <li>Certificate of Appreciation – Government of the People’s Republic of Bangladesh, 2021 | For contributions as a volunteer of Corona Medicine Bank in the COVID-19 vaccination program at Chattogram 250 Bedded General Hospital, Chattogram.</li>
-      </ul>
-    </section>
+<div class="photo">
+<!-- Your uploaded passport photo exists in repo so path is correct -->
+<img src="Formal Photo_passport size.jpg" alt="Arefin Ramin">
+</div>
 
-    <!-- VOLUNTEERING & EXPERIENCE -->
-    <section>
-      <h2>Volunteering & Experience</h2>
-      <ul>
-        <li><strong>President Advisor</strong> – Leo Club of Chittagong Karnaphuli Elite (July 2024-June 2025): A voluntary service organization which mainly focuses to work on Vision, Hunger, Eyesight, Diabetes and Childhood Cancer.</li>
-        <li><strong>Secretary</strong> – Kattali Youth Council (July 2022-June 2023): Empowers and engages local youth through community projects, education initiatives, and advocacy efforts, fostering positive change in the Kattali area.</li>
-        <li><strong>Assistant Organizing Secretary</strong> – Cubing Chittagong (August 2019-Present): An organization to promote Rubik’s Cube in Chittagong; organize competitions/events and foster a local community of Cube enthusiasts.</li>
-        <li><strong>Member</strong> – Bangla Tigers FC (2023-Present): Football Club at Yangzhou University | Participated in training and competitions.</li>
-      </ul>
-    </section>
+</div>
+</section>
 
-    <!-- REFERENCES -->
-    <section>
-      <h2>References</h2>
-      <div class="two-col">
-        <div>
-          <p><strong>Xiangjian Chen</strong><br>
-          Associate Professor<br>
-          School of Information Engineering and Artificial Intelligence<br>
-          Yangzhou University<br>
-          Phone: +86 177 5136 0234<br>
-          <a href="mailto:cxj831209@163.com">cxj831209@163.com</a></p>
-        </div>
-        <div>
-          <p><strong>Wu Xiaoxue</strong><br>
-          Associate Professor<br>
-          School of Information Engineering and Artificial Intelligence<br>
-          Yangzhou University<br>
-          Phone: +86 153 1945 9671<br>
-          <a href="mailto:xiaoxuewu@yzu.edu.cn">xiaoxuewu@yzu.edu.cn</a></p>
-        </div>
-      </div>
-    </section>
-  </div>
+<section id="about" class="section">
+<div class="container">
+<h2>About Me</h2>
+<div class="card">
+Software Engineering graduate from Yangzhou University (GPA 3.42/4.00, 83.9%). Passionate about backend engineering, machine learning, biomedical AI, and scalable software systems. Experienced in Django, REST APIs, PyTorch, database design, and production software deployment.
+</div>
+</div>
+</section>
+
+<section id="skills" class="section">
+<div class="container">
+<h2>Technical Expertise</h2>
+<div class="card">
+<span class="skill">Python</span>
+<span class="skill">Django</span>
+<span class="skill">REST API</span>
+<span class="skill">PyTorch</span>
+<span class="skill">TensorFlow</span>
+<span class="skill">Scikit-Learn</span>
+<span class="skill">JavaScript</span>
+<span class="skill">Java</span>
+<span class="skill">C/C++</span>
+<span class="skill">MySQL</span>
+<span class="skill">PostgreSQL</span>
+<span class="skill">PyQt5</span>
+<span class="skill">Machine Learning</span>
+<span class="skill">Deep Learning</span>
+<span class="skill">ECG Signal Processing</span>
+<span class="skill">Git</span>
+<span class="skill">Figma</span>
+<span class="skill">Adobe Illustrator</span>
+</div>
+</div>
+</section>
+
+<section id="projects" class="section">
+<div class="container">
+<h2>Featured Projects</h2>
+
+<div class="grid-3">
+
+<div class="card">
+<h3>BongoChat</h3>
+<p>Real-time social communication platform with messaging, authentication, user management and digital wallet integration.</p>
+</div>
+
+<div class="card">
+<h3>Shonirbhor</h3>
+<p>Large-scale marketplace platform connecting customers with local professionals, services and rental providers.</p>
+</div>
+
+<div class="card">
+<h3>Food Delivery Management System</h3>
+<p>Full-stack Django application with authentication, order management and secure backend architecture.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="research" class="section">
+<div class="container">
+<h2>Research & Thesis</h2>
+
+<div class="card">
+<h3>Design of ECG Signal Quality Annotation System and Research on Classification Model</h3>
+<br>
+<ul style="padding-left:20px;">
+<li>Developed a PyQt5-based ECG annotation platform.</li>
+<li>Processed and analyzed 11,983 ECG samples.</li>
+<li>Built a customized 1D ResNet architecture.</li>
+<li>Applied deep learning and biomedical signal processing techniques.</li>
+<li>Achieved 95.83% classification accuracy on unseen ECG test data.</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<h2>Achievements</h2>
+
+<div class="grid-2">
+
+<div class="card">
+<h3>National Second Prize</h3>
+<p>China Collegiate Computing Design Competition (National Level)</p>
+</div>
+
+<div class="card">
+<h3>Provincial Second Prize</h3>
+<p>China Collegiate Computing Design Competition (Jiangsu Province)</p>
+</div>
+
+<div class="card">
+<h3>University First Prize</h3>
+<p>Yangzhou University Selection Round</p>
+</div>
+
+<div class="card">
+<h3>Sound of Spring Champion</h3>
+<p>Yangzhou University Cultural Competition</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="contact" class="section">
+<div class="container">
+<h2>Contact</h2>
+<div class="card">
+<p><strong>Email:</strong> arefinraminz@gmail.com</p>
+<p><strong>Portfolio:</strong> raminyzu.github.io</p>
+<p><strong>Phone:</strong> +86 182 5271 2143</p>
+<p><strong>Location:</strong> Yangzhou, Jiangsu, China</p>
+<br>
+<!-- Add social links -->
+<div>
+<a href="https://github.com/raminyzu" target="_blank" class="btn secondary" style="padding:8px 14px;font-size:14px;">Github</a>
+<a href="#" target="_blank" class="btn secondary" style="padding:8px 14px;font-size:14px;">LinkedIn</a>
+<a href="#" target="_blank" class="btn secondary" style="padding:8px 14px;font-size:14px;">ResearchGate</a>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+© 2026 MD Arefin Islam Ramin. All Rights Reserved.
+</footer>
+
+<script>
+// Preloader hide after page loaded
+window.addEventListener('load',()=>{
+document.querySelector('.preloader').classList.add('hide');
+})
+
+// Scroll reveal animation for sections
+const allSections = document.querySelectorAll('.section');
+const navBar = document.getElementById('mainNav');
+
+window.addEventListener('scroll',()=>{
+// Navbar scroll style change
+if(window.scrollY > 60){
+navBar.classList.add('scrolled')
+}else{
+navBar.classList.remove('scrolled')
+}
+
+// Section scroll animate
+allSections.forEach(sec=>{
+const secTop = sec.getBoundingClientRect().top;
+const triggerPoint = window.innerHeight*0.83;
+if(secTop < triggerPoint){
+sec.classList.add('active')
+}
+})
+})
+</script>
+
 </body>
 </html>
