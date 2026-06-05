@@ -6,235 +6,287 @@
 <title>MD Arefin Islam Ramin | Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-font-family:'Inter',sans-serif;
-background:#0f172a;
-color:#f8fafc;
-line-height:1.7;
-overflow-x:hidden;
-/* subtle animated background gradient */
-background: linear-gradient(-45deg, #0f172a,#10203b,#0b1429,#152742);
-background-size:400% 400%;
-animation: bgGradientShift 18s ease infinite;
+    font-family:'Inter',sans-serif;
+    background:#0f172a;
+    color:#f8fafc;
+    line-height:1.7;
 }
-@keyframes bgGradientShift{
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:0 24px;
 }
-.container{max-width:1200px;margin:auto;padding:0 24px}
+
+/* Navigation */
+
 nav{
-position:sticky;top:0;
-backdrop-filter:blur(12px);
-background:rgba(15,23,42,.8);
-border-bottom:1px solid rgba(255,255,255,.08);
-z-index:100;
-transition: all 0.3s ease;
+    position:sticky;
+    top:0;
+    backdrop-filter:blur(12px);
+    background:rgba(15,23,42,.8);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    z-index:100;
 }
-/* Navbar scroll shrink effect */
-nav.scrolled{
-background:rgba(15,23,42,0.95);
-box-shadow:0 4px 22px rgba(56,189,248,0.08);
-}
+
 nav .container{
-display:flex;justify-content:space-between;align-items:center;
-padding:18px 24px;
-transition: padding 0.3s ease;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 24px;
 }
-nav.scrolled .container{
-padding:14px 24px;
-}
+
 nav a{
-color:#cbd5e1;text-decoration:none;margin-left:20px;
-position:relative;
-transition:color 0.3s ease;
+    color:#cbd5e1;
+    text-decoration:none;
+    margin-left:20px;
+    transition:.3s;
 }
-nav a::after{
-content:"";
-width:0%;
-height:2px;
-background:#38bdf8;
-position:absolute;
-left:0;
-bottom:-4px;
-transition:0.3s width ease;
+
+nav a:hover{
+    color:#38bdf8;
 }
-nav a:hover{color:#38bdf8}
-nav a:hover::after{width:100%}
+
+/* Hero Section */
+
 .hero{
-min-height:90vh;
-display:flex;align-items:center;
-padding:40px 0;
+    min-height:90vh;
+    display:flex;
+    align-items:center;
 }
+
 .hero-grid{
-display:grid;
-grid-template-columns:2fr 1fr;
-gap:50px;
-align-items:center;
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:50px;
+    align-items:center;
 }
+
 .gradient{
-background:linear-gradient(90deg,#38bdf8,#818cf8);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-background-size:200% auto;
-animation:textGradientAnim 3s linear infinite;
+    background:linear-gradient(90deg,#38bdf8,#818cf8);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
-@keyframes textGradientAnim{
-to{background-position:200% center}
+
+h1{
+    font-size:4rem;
+    line-height:1.1;
+    font-weight:800;
 }
-h1{font-size:4rem;line-height:1.1;font-weight:800}
-.subtitle{font-size:1.3rem;color:#94a3b8;margin:15px 0}
-.hero p{color:#cbd5e1}
-.btns{margin-top:25px}
+
+.subtitle{
+    font-size:1.3rem;
+    color:#94a3b8;
+    margin:15px 0;
+}
+
+.hero p{
+    color:#cbd5e1;
+}
+
+/* Buttons */
+
+.btns{
+    margin-top:25px;
+}
+
 .btn{
-display:inline-block;
-padding:12px 22px;
-border-radius:12px;
-text-decoration:none;
-margin-right:10px;
-font-weight:600;
-transition:all 0.3s ease;
-position:relative;
-overflow:hidden;
+    display:inline-block;
+    padding:12px 22px;
+    border-radius:12px;
+    text-decoration:none;
+    margin-right:10px;
+    font-weight:600;
+    transition:.3s;
 }
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
 .primary{
-background:#38bdf8;color:#08111f;
-box-shadow:0 0 18px rgba(56,189,248,0.25);
+    background:#38bdf8;
+    color:#08111f;
 }
-.primary:hover{
-transform:translateY(-4px);
-box-shadow:0 0 28px rgba(56,189,248,0.45);
+
+.secondary{
+    border:1px solid rgba(255,255,255,.15);
+    color:white;
 }
-.secondary{border:1px solid rgba(255,255,255,.15);color:white}
-.secondary:hover{
-border-color:#38bdf8;
-background:rgba(56,189,248,0.08);
-transform:translateY(-4px);
-}
+
+/* Profile Image */
+
 .photo{
-width:320px;height:320px;
-border-radius:24px;
-overflow:hidden;
-border:2px solid rgba(255,255,255,.12);
-margin:auto;
-/* floating avatar animation */
-animation: floatAvatar 5s ease-in-out infinite;
-box-shadow:0 10px 35px rgba(56,189,248,0.15);
+    width:320px;
+    height:320px;
+    border-radius:24px;
+    overflow:hidden;
+    border:2px solid rgba(255,255,255,.12);
+    margin:auto;
 }
-@keyframes floatAvatar{
-0%,100%{transform:translateY(0px)}
-50%{transform:translateY(-16px)}
-}
+
 .photo img{
-width:100%;height:100%;object-fit:cover;
-transition:transform 0.5s ease;
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
-.photo:hover img{transform:scale(1.06)}
-.section{padding:80px 0;opacity:0;transform:translateY(36px);transition:0.7s ease-out;}
-/* scroll active animation class added via JS */
-.section.active{opacity:1;transform:translateY(0)}
+
+/* Sections */
+
+.section{
+    padding:80px 0;
+}
+
 .section h2{
-font-size:2rem;
-margin-bottom:25px;
+    font-size:2rem;
+    margin-bottom:25px;
 }
+
+/* Cards */
+
 .card{
-background:rgba(255,255,255,.05);
-backdrop-filter:blur(12px);
-border:1px solid rgba(255,255,255,.08);
-border-radius:20px;
-padding:24px;
-transition:.3s all ease;
-position:relative;
-overflow:hidden;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:24px;
+    transition:.3s;
 }
-.card::before{
-content:"";
-position:absolute;
-top:0;left:-100%;
-width:100%;height:100%;
-background:linear-gradient(90deg,transparent,rgba(56,189,248,0.07),transparent);
-transition:0.5s left ease;
-}
-.card:hover::before{left:100%}
+
 .card:hover{
-transform:translateY(-6px);
-border-color:rgba(56,189,248,0.22);
-box-shadow:0 12px 32px rgba(56,189,248,0.09);
+    transform:translateY(-6px);
+    border-color:rgba(56,189,248,.25);
 }
-.grid-3{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:24px;
-}
+
+/* Grid Layouts */
+
 .grid-2{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:24px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
 }
+
+.grid-3{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:24px;
+}
+
+.grid-4{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:24px;
+}
+
+/* Statistics Cards */
+
+.grid-4 .card{
+    text-align:center;
+    min-height:140px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.grid-4 .card h2{
+    font-size:2.4rem;
+    margin-bottom:10px;
+}
+
+.grid-4 .card p{
+    margin:0;
+    color:#94a3b8;
+    font-size:.95rem;
+    line-height:1.4;
+}
+
+/* Skills */
+
 .skill{
-display:inline-block;
-padding:8px 14px;
-background:#1e293b;
-border-radius:999px;
-margin:6px;
-transition:all 0.3s ease;
-border:1px solid transparent;
+    display:inline-block;
+    padding:8px 14px;
+    margin:6px;
+    border-radius:999px;
+    background:rgba(56,189,248,.08);
+    border:1px solid rgba(56,189,248,.18);
+    font-size:14px;
+    transition:.3s;
 }
+
 .skill:hover{
-border-color:#38bdf8;
-background:rgba(56,189,248,0.1);
-transform:scale(1.06);
+    background:rgba(56,189,248,.18);
+    border-color:#38bdf8;
+    transform:translateY(-2px);
 }
+
+/* Footer */
+
 footer{
-text-align:center;
-padding:40px;
-color:#94a3b8;
-border-top:1px solid rgba(255,255,255,0.06);
-margin-top:30px;
+    text-align:center;
+    padding:40px;
+    color:#94a3b8;
 }
-/* Preloader CSS */
-.preloader{
-position:fixed;
-inset:0;
-background:#0f172a;
-z-index:9999;
-display:flex;
-align-items:center;justify-content:center;
-transition:opacity 0.6s ease, visibility 0.6s ease;
-}
-.preloader.hide{opacity:0;visibility:hidden;pointer-events:none;}
-.load-circle{
-width:55px;height:55px;
-border:4px solid rgba(56,189,248,0.15);
-border-top-color:#38bdf8;
-border-radius:50%;
-animation:spinLoader 1s linear infinite;
-}
-@keyframes spinLoader{to{transform:rotate(360deg)}}
+
+/* Responsive */
 
 @media(max-width:900px){
-.hero-grid,.grid-2,.grid-3{grid-template-columns:1fr}
-h1{font-size:2.6rem}
-.photo{width:260px;height:260px}
-nav .container{flex-direction:column;gap:12px;text-align:center}
-nav div{margin-top:10px}
-nav a{margin:0 10px}
+
+    .hero-grid,
+    .grid-2{
+        grid-template-columns:1fr;
+    }
+
+    h1{
+        font-size:2.8rem;
+    }
+
+    .photo{
+        width:260px;
+        height:260px;
+    }
+
+    .grid-4{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .grid-4{
+        grid-template-columns:1fr;
+    }
+
+    h1{
+        font-size:2.3rem;
+    }
+
+    .subtitle{
+        font-size:1.1rem;
+    }
 }
 </style>
 </head>
 <body>
-<!-- Page Preloader -->
-<div class="preloader">
-<div class="load-circle"></div>
-</div>
 
-<nav id="mainNav">
+<nav>
 <div class="container">
 <h3 class="gradient">Arefin Ramin</h3>
 <div>
 <a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#experience">Experience</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#research">Research</a>
@@ -247,25 +299,85 @@ nav a{margin:0 10px}
 <div class="container hero-grid">
 
 <div>
+
 <h1 class="gradient">MD Arefin Islam Ramin</h1>
-<div class="subtitle">Software Engineer • Backend Developer • AI Researcher</div>
+
+<div class="subtitle">
+Software Engineering Graduate • Backend Developer • AI Researcher • Future Software Architect
+</div>
 
 <p>
-Software Engineering graduate from Yangzhou University with expertise in backend development,
-full-stack web applications, machine learning, biomedical signal processing, and intelligent healthcare systems.
-Developer of production-grade Django applications and researcher in ECG signal classification using deep learning.
+Award-winning Software Engineering graduate from Yangzhou University, China, with expertise in backend development, web application engineering, artificial intelligence, and software architecture. Passionate about building scalable software solutions, conducting impactful research, and transforming innovative ideas into real-world applications.
 </p>
 
-<div class="btns">
-<!-- Fixed Resume Download link pointing to your uploaded CV PDF -->
-<a class="btn primary" href="./CV of Arefin Islam Ramin.pdf" download>Download Resume</a>
-<a class="btn secondary" href="https://github.com/raminyzu" target="_blank">GitHub</a>
+<div style="margin-top:18px;color:#94a3b8;display:flex;flex-wrap:wrap;gap:14px;font-size:14px;">
+<span>📍 Yangzhou, China</span>
+<span>🎓 Software Engineering</span>
+<span>🏆 National Competition Award Winner</span>
+<span>💻 Backend Development</span>
 </div>
+
+<div class="btns">
+<a class="btn primary" href="./CV of Arefin Islam Ramin.pdf" download>
+Download Resume
+</a>
+
+<a class="btn secondary" href="https://github.com/raminyzu" target="_blank">
+GitHub
+</a>
+
+<a class="btn secondary" href="https://linkedin.com/in/arefin-raminz" target="_blank">
+LinkedIn
+</a>
+</div>
+
 </div>
 
 <div class="photo">
-<!-- Your uploaded passport photo exists in repo so path is correct -->
+
 <img src="Formal Photo_passport size.jpg" alt="Arefin Ramin">
+</div>
+
+</div>
+</section>
+
+<section class="section active">
+<div class="container">
+
+<div class="grid-4">
+
+<div class="card" style="text-align:center;">
+<h2 class="gradient">10+</h2>
+<p>Software Projects</p>
+</div>
+
+<div class="card" style="text-align:center;">
+<h2 class="gradient">95.8%</h2>
+<p>Research Accuracy</p>
+</div>
+
+<div class="card" style="text-align:center;">
+<h2 class="gradient">11,983</h2>
+<p>ECG Dataset Samples</p>
+</div>
+
+<div class="card" style="text-align:center;">
+<h2 class="gradient">2026</h2>
+<p>B.Sc. Graduate</p>
+</div>
+<div class="card" style="text-align:center;">
+<h2 class="gradient">4+</h2>
+<p>Major Awards</p>
+</div>
+
+<div class="card" style="text-align:center;">
+<h2 class="gradient">3</h2>
+<p>Languages Spoken</p>
+</div>
+<div class="card" style="text-align:center;">
+<h2 class="gradient">3</h2>
+<p>Leadership Roles</p>
+</div>
 </div>
 
 </div>
@@ -275,76 +387,474 @@ Developer of production-grade Django applications and researcher in ECG signal c
 <div class="container">
 <h2>About Me</h2>
 <div class="card">
-Software Engineering graduate from Yangzhou University (GPA 3.42/4.00, 83.9%). Passionate about backend engineering, machine learning, biomedical AI, and scalable software systems. Experienced in Django, REST APIs, PyTorch, database design, and production software deployment.
+Software Engineering graduate from Yangzhou University with a strong passion for backend development, software architecture, artificial intelligence, and scalable system design. Throughout my academic journey, I have developed full-stack applications, conducted AI-driven biomedical research, and participated in national-level computing competitions. I enjoy solving real-world problems through technology and continuously strive to expand my knowledge in software engineering, research, and emerging technologies.
+<p style="margin-top:15px;">
+My undergraduate thesis focused on designing an ECG Signal Quality Annotation System and developing a deep-learning-based classification model using a customized 1D ResNet50 architecture. The research achieved approximately 95.8% classification accuracy on a dataset of 11,983 ECG samples and explored the application of artificial intelligence in intelligent healthcare systems.
+</p>
 </div>
+</div>
+</section>
+
+<section id="education" class="section">
+<div class="container">
+
+<h2>Education</h2>
+
+<div class="card">
+
+<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:20px;">
+
+<div>
+<h3>Bachelor of Science (B.Sc.) in Software Engineering</h3>
+<p style="color:#94a3b8;margin-top:6px;">
+Yangzhou University, Jiangsu, China
+</p>
+</div>
+
+<div style="text-align:right;">
+<p><strong>2022 – 2026</strong></p>
+<p style="color:#38bdf8;">CGPA: 3.42 / 4.00</p>
+</div>
+
+</div>
+
+<hr style="margin:20px 0;border:none;height:1px;background:rgba(255,255,255,.08);">
+
+<h4 style="margin-bottom:12px;">Relevant Coursework</h4>
+
+<div>
+
+<span class="skill">Software Architecture</span>
+<span class="skill">Software Engineering</span>
+<span class="skill">Database Systems</span>
+<span class="skill">Operating Systems</span>
+<span class="skill">Computer Networks</span>
+<span class="skill">Algorithms & Data Structures</span>
+<span class="skill">Software Quality Assurance</span>
+<span class="skill">Software Requirements Engineering</span>
+<span class="skill">Project Management</span>
+<span class="skill">Machine Learning</span>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="experience" class="section">
+<div class="container">
+
+<h2>Leadership & Experience</h2>
+
+<div class="grid-2">
+
+<div class="card">
+<h3>President Advisor</h3>
+<p style="color:#38bdf8;margin-bottom:10px;">
+Leo Club of Chittagong Karnaphuli Elite | 2024 – 2025
+</p>
+
+<p>
+Provided strategic guidance for club activities, leadership development, community service initiatives, and event planning. Assisted executive members in organizing social impact projects and volunteer programs.
+</p>
+</div>
+<div class="card">
+<h3>Treasurer</h3>
+<p style="color:#38bdf8;margin-bottom:10px;">
+Kattali Youth Council | 2022 – 2023
+</p>
+
+<p>
+Managed organizational finances, maintained budget records, monitored expenses, and supported the planning and execution of community development initiatives. Collaborated with executive members to ensure effective financial management of events and activities.
+</p>
+</div>
+<div class="card">
+<h3>Assistant Organizing Secretary</h3>
+<p style="color:#38bdf8;margin-bottom:10px;">
+Cubing Chittagong | 2019 – Present
+</p>
+
+<p>
+Supported event management, participant coordination, competition organization, and community engagement activities for speedcubing enthusiasts in Chattogram.
+</p>
+</div>
+
+</div>
+
 </div>
 </section>
 
 <section id="skills" class="section">
 <div class="container">
-<h2>Technical Expertise</h2>
+
+<h2>Technical Skills</h2>
+
+<div class="grid-3">
+
 <div class="card">
+<h3>💻 Backend Development</h3>
+<br>
 <span class="skill">Python</span>
 <span class="skill">Django</span>
+<span class="skill">Java</span>
+<span class="skill">JSP</span>
+<span class="skill">Servlet</span>
+<span class="skill">ASP.NET</span>
+<span class="skill">Node.js</span>
 <span class="skill">REST API</span>
+</div>
+
+<div class="card">
+<h3>🎨 Frontend Development</h3>
+<br>
+<span class="skill">HTML5</span>
+<span class="skill">CSS3</span>
+<span class="skill">JavaScript</span>
+<span class="skill">Responsive Design</span>
+</div>
+
+<div class="card">
+<h3>🗄 Database Systems</h3>
+<br>
+<span class="skill">MySQL</span>
+<span class="skill">PostgreSQL</span>
+<span class="skill">SQL</span>
+<span class="skill">JDBC</span>
+<span class="skill">Database Design</span>
+</div>
+
+<div class="card">
+<h3>🤖 AI & Machine Learning</h3>
+<br>
+<span class="skill">Machine Learning</span>
+<span class="skill">Deep Learning</span>
 <span class="skill">PyTorch</span>
 <span class="skill">TensorFlow</span>
 <span class="skill">Scikit-Learn</span>
-<span class="skill">JavaScript</span>
-<span class="skill">Java</span>
-<span class="skill">C/C++</span>
-<span class="skill">MySQL</span>
-<span class="skill">PostgreSQL</span>
-<span class="skill">PyQt5</span>
-<span class="skill">Machine Learning</span>
-<span class="skill">Deep Learning</span>
 <span class="skill">ECG Signal Processing</span>
-<span class="skill">Git</span>
-<span class="skill">Figma</span>
-<span class="skill">Adobe Illustrator</span>
 </div>
+
+<div class="card">
+<h3>📱 Mobile Development</h3>
+<br>
+<span class="skill">Flutter</span>
+<span class="skill">Dart</span>
+</div>
+
+<div class="card">
+<h3>⚙ Tools & Technologies</h3>
+<br>
+<span class="skill">Git</span>
+<span class="skill">GitHub</span>
+<span class="skill">VS Code</span>
+<span class="skill">Eclipse</span>
+<span class="skill">IntelliJ IDEA</span>
+<span class="skill">Qt Creator</span>
+<span class="skill">PyCharm</span>
+<span class="skill">Cisco</span>
+</div>
+
+<div class="card">
+<h3>🖥 Programming Languages</h3>
+<br>
+<span class="skill">Python</span>
+<span class="skill">Java</span>
+<span class="skill">C</span>
+<span class="skill">C++</span>
+<span class="skill">C#</span>
+<span class="skill">JavaScript</span>
+<span class="skill">Dart</span>
+<span class="skill">SQL</span>
+</div>
+
+<div class="card">
+<h3>🎨 Design & Multimedia</h3>
+<br>
+<span class="skill">Canva</span>
+<span class="skill">Figma</span>
+<span class="skill">Illustrator</span>
+<span class="skill">Poster Design</span>
+<span class="skill">Banner Design</span>
+<span class="skill">Video Editing</span>
+</div>
+
+<div class="card">
+<h3>🌐 Languages</h3>
+<br>
+<span class="skill">Bengali</span>
+<span class="skill">English</span>
+<span class="skill">Chinese</span>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<h2>Highlights</h2>
+
+<div class="grid-3">
+
+<div class="card" style="text-align:center;">
+<h3>🏆 National Award Winner</h3>
+<p>China Collegiate Computing Design Competition</p>
+</div>
+
+<div class="card" style="text-align:center;">
+<h3>🎓 International Graduate</h3>
+<p>Software Engineering, Yangzhou University</p>
+</div>
+
+<div class="card" style="text-align:center;">
+<h3>🔬 AI Researcher</h3>
+<p>Biomedical Signal Processing & Deep Learning</p>
+</div>
+
+</div>
+
 </div>
 </section>
 
 <section id="projects" class="section">
 <div class="container">
+
 <h2>Featured Projects</h2>
 
-<div class="grid-3">
+<div class="grid-2">
+
+<!-- BongoChat -->
 
 <div class="card">
-<h3>BongoChat</h3>
-<p>Real-time social communication platform with messaging, authentication, user management and digital wallet integration.</p>
+<h3>💬 BongoChat</h3>
+
+<p style="color:#94a3b8;margin:12px 0;">
+Real-time communication platform developed through collaborative teamwork.
+</p>
+
+<div style="margin-bottom:15px;">
+<span class="skill">Team Project</span>
+<span class="skill">Backend Development</span>
+<span class="skill">Brand Design</span>
 </div>
+
+<ul style="padding-left:20px;">
+<li>Worked as Assistant Backend Developer.</li>
+<li>Contributed to backend implementation and system functionality.</li>
+<li>Designed the project logo and visual branding materials.</li>
+<li>Managed media content and promotional assets.</li>
+<li>Collaborated with team members throughout development.</li>
+</ul>
+
+</div>
+
+<!-- Shonirbhor -->
 
 <div class="card">
-<h3>Shonirbhor</h3>
-<p>Large-scale marketplace platform connecting customers with local professionals, services and rental providers.</p>
+<h3>🛠 Shonirbhor</h3>
+
+<p style="color:#94a3b8;margin:12px 0;">
+Marketplace platform connecting customers with local service providers.
+</p>
+
+<div style="margin-bottom:15px;">
+<span class="skill">Team Project</span>
+<span class="skill">Backend Development</span>
+<span class="skill">Media Management</span>
 </div>
+
+<ul style="padding-left:20px;">
+<li>Worked as Assistant Backend Developer.</li>
+<li>Participated in system development and functionality planning.</li>
+<li>Designed project logo and branding materials.</li>
+<li>Managed social media and project promotional content.</li>
+<li>Supported collaboration and project coordination.</li>
+</ul>
+
+</div>
+
+<!-- Food Delivery -->
 
 <div class="card">
-<h3>Food Delivery Management System</h3>
-<p>Full-stack Django application with authentication, order management and secure backend architecture.</p>
+<h3>🍔 Food Delivery Management System</h3>
+
+<p style="color:#94a3b8;margin:12px 0;">
+Full-stack web application developed independently using Django and MySQL.
+</p>
+
+<div style="margin-bottom:15px;">
+<span class="skill">Python</span>
+<span class="skill">Django</span>
+<span class="skill">MySQL</span>
+<span class="skill">Individual Project</span>
+</div>
+
+<ul style="padding-left:20px;">
+<li>User authentication and account management.</li>
+<li>Restaurant and menu management system.</li>
+<li>Shopping cart and order processing functionality.</li>
+<li>Admin dashboard for monitoring operations.</li>
+<li>Database-driven backend architecture.</li>
+</ul>
+
+</div>
+
+<!-- ECG -->
+
+<div class="card">
+<h3>🫀 ECG Signal Annotation & Classification System</h3>
+
+<p style="color:#94a3b8;margin:12px 0;">
+Research and software project focused on biomedical signal analysis using artificial intelligence.
+</p>
+
+<div style="margin-bottom:15px;">
+<span class="skill">PyQt5</span>
+<span class="skill">PyTorch</span>
+<span class="skill">Deep Learning</span>
+<span class="skill">Research Project</span>
+</div>
+
+<ul style="padding-left:20px;">
+<li>Developed ECG annotation software platform.</li>
+<li>Processed 11,983 ECG signal samples.</li>
+<li>Designed a customized 1D ResNet classification model.</li>
+<li>Applied biomedical signal processing techniques.</li>
+<li>Achieved 95.83% classification accuracy.</li>
+</ul>
+
 </div>
 
 </div>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="grid-4">
+
+<div class="card" style="text-align:center;">
+<h2 class="gradient">10+</h2>
+<p>Projects Completed</p>
+</div>
+
+<div class="card" style="text-align:center;">
+<h2 class="gradient">4</h2>
+<p>Featured Projects</p>
+</div>
+
+<div class="card" style="text-align:center;">
+<h2 class="gradient">11,983</h2>
+<p>ECG Samples Processed</p>
+</div>
+
+<div class="card" style="text-align:center;">
+<h2 class="gradient">95.83%</h2>
+<p>Research Accuracy</p>
+</div>
+
+</div>
+
 </div>
 </section>
 
 <section id="research" class="section">
 <div class="container">
+
 <h2>Research & Thesis</h2>
 
 <div class="card">
-<h3>Design of ECG Signal Quality Annotation System and Research on Classification Model</h3>
-<br>
-<ul style="padding-left:20px;">
-<li>Developed a PyQt5-based ECG annotation platform.</li>
-<li>Processed and analyzed 11,983 ECG samples.</li>
-<li>Built a customized 1D ResNet architecture.</li>
-<li>Applied deep learning and biomedical signal processing techniques.</li>
-<li>Achieved 95.83% classification accuracy on unseen ECG test data.</li>
+
+<h3>
+🫀 Design of ECG Signal Quality Annotation System and Research on Classification Model
+</h3>
+
+<p style="margin-top:15px;color:#94a3b8;">
+Bachelor's Thesis | Yangzhou University | 2026
+</p>
+
+<p style="margin-top:20px;">
+This research focuses on developing an intelligent ECG signal annotation and classification system for assisting cardiovascular disease analysis. The project combines software engineering, biomedical signal processing, and deep learning to create a complete pipeline from data annotation to automatic ECG quality classification.
+</p>
+
+<div style="margin-top:20px;">
+<span class="skill">Deep Learning</span>
+<span class="skill">PyTorch</span>
+<span class="skill">PyQt5</span>
+<span class="skill">1D ResNet50</span>
+<span class="skill">Biomedical AI</span>
+<span class="skill">ECG Signal Processing</span>
+<span class="skill">Healthcare Technology</span>
+</div>
+
+<hr style="margin:25px 0;border:none;height:1px;background:rgba(255,255,255,.08);">
+
+<h4>Research Objectives</h4>
+
+<ul style="padding-left:20px;margin-top:10px;">
+<li>Develop a visual ECG signal annotation platform for expert labeling.</li>
+<li>Construct a high-quality ECG signal dataset.</li>
+<li>Adapt ResNet50 architecture for one-dimensional ECG signals.</li>
+<li>Develop an automatic ECG quality classification model.</li>
+<li>Improve intelligent healthcare analysis through AI-driven automation.</li>
 </ul>
+
+<hr style="margin:25px 0;border:none;height:1px;background:rgba(255,255,255,.08);">
+
+<h4>Key Contributions</h4>
+
+<ul style="padding-left:20px;margin-top:10px;">
+<li>Designed and implemented a complete ECG annotation system using PyQt5.</li>
+<li>Constructed a dataset containing 11,983 annotated ECG samples.</li>
+<li>Processed ECG segments consisting of 5,000 data points per sample.</li>
+<li>Applied Z-score normalization for signal standardization.</li>
+<li>Developed a customized 1D ResNet50 classification model.</li>
+<li>Implemented AdamW optimization and Cosine Annealing learning-rate scheduling.</li>
+</ul>
+
+<hr style="margin:25px 0;border:none;height:1px;background:rgba(255,255,255,.08);">
+
+<h4>Results</h4>
+
+<div class="grid-3" style="margin-top:20px;">
+
+<div class="card" style="text-align:center;">
+<h2 class="gradient">11,983</h2>
+<p>Annotated ECG Samples</p>
+</div>
+
+<div class="card" style="text-align:center;">
+<h2 class="gradient">5000</h2>
+<p>Data Points per Sample</p>
+</div>
+
+<div class="card" style="text-align:center;">
+<h2 class="gradient">95.8%</h2>
+<p>Classification Accuracy</p>
+</div>
+
+</div>
+
+<hr style="margin:25px 0;border:none;height:1px;background:rgba(255,255,255,.08);">
+
+<h4>Research Interests</h4>
+
+<div style="margin-top:15px;">
+<span class="skill">Artificial Intelligence</span>
+<span class="skill">Machine Learning</span>
+<span class="skill">Deep Learning</span>
+<span class="skill">Software Engineering</span>
+<span class="skill">Biomedical Informatics</span>
+<span class="skill">Healthcare Systems</span>
+<span class="skill">Signal Processing</span>
+<span class="skill">Data Science</span>
+</div>
+
 </div>
 
 </div>
@@ -388,13 +898,6 @@ Software Engineering graduate from Yangzhou University (GPA 3.42/4.00, 83.9%). P
 <p><strong>Portfolio:</strong> raminyzu.github.io</p>
 <p><strong>Phone:</strong> +86 182 5271 2143</p>
 <p><strong>Location:</strong> Yangzhou, Jiangsu, China</p>
-<br>
-<!-- Add social links -->
-<div>
-<a href="https://github.com/raminyzu" target="_blank" class="btn secondary" style="padding:8px 14px;font-size:14px;">Github</a>
-<a href="#" target="_blank" class="btn secondary" style="padding:8px 14px;font-size:14px;">LinkedIn</a>
-<a href="#" target="_blank" class="btn secondary" style="padding:8px 14px;font-size:14px;">ResearchGate</a>
-</div>
 </div>
 </div>
 </section>
@@ -402,35 +905,6 @@ Software Engineering graduate from Yangzhou University (GPA 3.42/4.00, 83.9%). P
 <footer>
 © 2026 MD Arefin Islam Ramin. All Rights Reserved.
 </footer>
-
-<script>
-// Preloader hide after page loaded
-window.addEventListener('load',()=>{
-document.querySelector('.preloader').classList.add('hide');
-})
-
-// Scroll reveal animation for sections
-const allSections = document.querySelectorAll('.section');
-const navBar = document.getElementById('mainNav');
-
-window.addEventListener('scroll',()=>{
-// Navbar scroll style change
-if(window.scrollY > 60){
-navBar.classList.add('scrolled')
-}else{
-navBar.classList.remove('scrolled')
-}
-
-// Section scroll animate
-allSections.forEach(sec=>{
-const secTop = sec.getBoundingClientRect().top;
-const triggerPoint = window.innerHeight*0.83;
-if(secTop < triggerPoint){
-sec.classList.add('active')
-}
-})
-})
-</script>
 
 </body>
 </html>
