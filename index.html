@@ -1,1143 +1,743 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MD Arefin Islam Ramin | Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    <meta charset="UTF-8">
 
-html{
-    scroll-behavior:smooth;
-}
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-body{
-    font-family:'Inter',sans-serif;
-    background:#0f172a;
-    color:#f8fafc;
-    line-height:1.7;
-}
+    <meta
+        name="description"
+        content="Portfolio of Arefin Islam Ramin, a master's student at the University of Electronic Science and Technology of China with a background in Software Engineering and interests in AI, machine learning and signal processing."
+    >
 
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:0 24px;
-}
+    <meta
+        name="author"
+        content="Arefin Islam Ramin"
+    >
 
-/* Navigation */
+    <meta
+        property="og:title"
+        content="Arefin Islam Ramin | Portfolio"
+    >
 
-nav{
-    position:sticky;
-    top:0;
-    backdrop-filter:blur(12px);
-    background:rgba(15,23,42,.8);
-    border-bottom:1px solid rgba(255,255,255,.08);
-    z-index:100;
-}
+    <meta
+        property="og:description"
+        content="Software Engineering graduate and master's student at UESTC exploring AI, machine learning, signal processing and intelligent systems."
+    >
 
-nav .container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 24px;
-}
+    <meta
+        property="og:type"
+        content="website"
+    >
 
-nav a{
-    color:#cbd5e1;
-    text-decoration:none;
-    margin-left:20px;
-    transition:.3s;
-}
+    <title>Arefin Islam Ramin | Portfolio</title>
 
-nav a:hover{
-    color:#38bdf8;
-}
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
 
-/* Hero Section */
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
-.hero{
-    min-height:90vh;
-    display:flex;
-    align-items:center;
-}
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
-.hero-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr;
-    gap:50px;
-    align-items:center;
-}
-
-.gradient{
-    background:linear-gradient(90deg,#38bdf8,#818cf8);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-
-h1{
-    font-size:4rem;
-    line-height:1.1;
-    font-weight:800;
-}
-
-.subtitle{
-    font-size:1.3rem;
-    color:#94a3b8;
-    margin:15px 0;
-}
-
-.hero p{
-    color:#cbd5e1;
-}
-
-/* Buttons */
-
-.btns{
-    margin-top:25px;
-}
-
-.btn{
-    display:inline-block;
-    padding:12px 22px;
-    border-radius:12px;
-    text-decoration:none;
-    margin-right:10px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:translateY(-2px);
-}
-
-.primary{
-    background:#38bdf8;
-    color:#08111f;
-}
-
-.secondary{
-    border:1px solid rgba(255,255,255,.15);
-    color:white;
-}
-
-/* Profile Image */
-
-.photo{
-    width:320px;
-    height:320px;
-    border-radius:24px;
-    overflow:hidden;
-    border:2px solid rgba(255,255,255,.12);
-    margin:auto;
-}
-
-.photo img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-/* Sections */
-
-.section{
-    padding:80px 0;
-}
-
-.section h2{
-    font-size:2rem;
-    margin-bottom:25px;
-}
-
-/* Cards */
-
-.card{
-    background:rgba(255,255,255,.05);
-    backdrop-filter:blur(12px);
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:20px;
-    padding:24px;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-6px);
-    border-color:rgba(56,189,248,.25);
-}
-
-/* Grid Layouts */
-
-.grid-2{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:24px;
-}
-
-.grid-3{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:24px;
-}
-
-.grid-4{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:24px;
-}
-
-/* Statistics Cards */
-
-.grid-4 .card{
-    text-align:center;
-    min-height:140px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-}
-
-.grid-4 .card h2{
-    font-size:2.4rem;
-    margin-bottom:10px;
-}
-
-.grid-4 .card p{
-    margin:0;
-    color:#94a3b8;
-    font-size:.95rem;
-    line-height:1.4;
-}
-
-/* Skills */
-
-.skill{
-    display:inline-block;
-    padding:8px 14px;
-    margin:6px;
-    border-radius:999px;
-    background:rgba(56,189,248,.08);
-    border:1px solid rgba(56,189,248,.18);
-    font-size:14px;
-    transition:.3s;
-}
-
-.skill:hover{
-    background:rgba(56,189,248,.18);
-    border-color:#38bdf8;
-    transform:translateY(-2px);
-}
-
-/* Footer */
-
-footer{
-    text-align:center;
-    padding:40px;
-    color:#94a3b8;
-}
-
-/* Responsive */
-
-@media(max-width:900px){
-
-    .hero-grid,
-    .grid-2{
-        grid-template-columns:1fr;
-    }
-
-    h1{
-        font-size:2.8rem;
-    }
-
-    .photo{
-        width:260px;
-        height:260px;
-    }
-
-    .grid-4{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-@media(max-width:600px){
-
-    .grid-4{
-        grid-template-columns:1fr;
-    }
-
-    h1{
-        font-size:2.3rem;
-    }
-
-    .subtitle{
-        font-size:1.1rem;
-    }
-}
-</style>
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
 </head>
+
+
 <body>
 
-<nav>
-<div class="container">
-<h3 class="gradient">Arefin Ramin</h3>
-<div>
-<a href="#about">About</a>
-<a href="#education">Education</a>
-<a href="#experience">Experience</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#research">Research</a>
-<a href="#achievements">Achievements</a>
-<a href="#contact">Contact</a>
-</div>
-</div>
-</nav>
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
 
-<section class="hero">
-<div class="container hero-grid">
+    <header class="site-header">
 
-<div>
+        <div class="container nav-container">
 
-<h1 class="gradient">MD Arefin Islam Ramin</h1>
+            <a
+                href="#home"
+                class="brand"
+            >
+                Ramin<span>.</span>
+            </a>
 
-<div class="subtitle">
-Software Engineering Graduate • Backend Developer • AI Researcher • Future Software Architect
-</div>
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+            </button>
 
-<p>
-Award-winning Software Engineering graduate from Yangzhou University, China, with expertise in backend development, web application engineering, artificial intelligence, and software architecture. Passionate about building scalable software solutions, conducting impactful research, and transforming innovative ideas into real-world applications.
-</p>
+            <nav
+                class="navigation"
+                id="navigation"
+                aria-label="Main navigation"
+            >
 
-<div style="margin-top:18px;color:#94a3b8;display:flex;flex-wrap:wrap;gap:14px;font-size:14px;">
-<span>📍 Yangzhou, China</span>
-<span>🎓 Software Engineering</span>
-<span>🏆 CCCDC National Second Prize Winner</span>
-<span>💻 Backend Development</span>
-</div>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#research">Research</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#contact">Contact</a>
 
-<div class="btns">
-<a class="btn primary" href="./CV of Arefin Islam Ramin.pdf" download>
-Download Resume
-</a>
+            </nav>
 
-<a class="btn secondary" href="https://github.com/raminyzu" target="_blank">
-GitHub
-</a>
-
-<a class="btn secondary" href="https://linkedin.com/in/arefin-raminz" target="_blank">
-LinkedIn
-</a>
-</div>
-
-</div>
-
-<div class="photo">
-
-<img src="Formal Photo_passport size.jpg" alt="Arefin Ramin">
-</div>
-
-</div>
-</section>
-
-<section class="section active">
-<div class="container">
-
-<div class="grid-4">
-
-<div class="card" style="text-align:center;">
-<h2 class="gradient">10+</h2>
-<p>Software Projects</p>
-</div>
-
-<div class="card" style="text-align:center;">
-<h2 class="gradient">95.8%</h2>
-<p>Research Accuracy</p>
-</div>
-
-<div class="card" style="text-align:center;">
-<h2 class="gradient">11,983</h2>
-<p>ECG Dataset Samples</p>
-</div>
-
-<div class="card" style="text-align:center;">
-<h2 class="gradient">2026</h2>
-<p>B.Sc. Graduate</p>
-</div>
-<div class="card" style="text-align:center;">
-<h2 class="gradient">4+</h2>
-<p>Major Awards</p>
-</div>
-
-<div class="card" style="text-align:center;">
-<h2 class="gradient">3</h2>
-<p>Languages Spoken</p>
-</div>
-<div class="card" style="text-align:center;">
-<h2 class="gradient">3</h2>
-<p>Leadership Roles</p>
-</div>
-</div>
-
-</div>
-</section>
-
-<section id="about" class="section">
-<div class="container">
-<h2>About Me</h2>
-<div class="card">
-Software Engineering graduate from Yangzhou University with a strong passion for backend development, software architecture, artificial intelligence, and scalable system design. Throughout my academic journey, I have developed full-stack applications, conducted AI-driven biomedical research, and participated in national-level computing competitions. I enjoy solving real-world problems through technology and continuously strive to expand my knowledge in software engineering, research, and emerging technologies.
-<p style="margin-top:15px;">
-My undergraduate thesis focused on designing an ECG Signal Quality Annotation System and developing a deep-learning-based classification model using a customized 1D ResNet50 architecture. The research achieved approximately 95.8% classification accuracy on a dataset of 11,983 ECG samples and explored the application of artificial intelligence in intelligent healthcare systems.
-</p>
-</div>
-</div>
-</section>
-
-<section id="education" class="section">
-  <div class="container">
-
-    <h2>Education</h2>
-
-    
-    <div class="card">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:20px;">
-        <div>
-          <h3>Bachelor of Science (B.Sc.) in Software Engineering</h3>
-          <p style="color:#94a3b8;margin-top:6px;">
-            Yangzhou University, Jiangsu, China
-          </p>
         </div>
-        <div style="text-align:right;">
-          <p><strong>2022 – 2026</strong></p>
-          <p style="color:#38bdf8;">CGPA: 3.42 / 4.00</p>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section
+            class="hero"
+            id="home"
+        >
+
+            <div class="container hero-layout">
+
+                <div class="hero-content">
+
+                    <p class="eyebrow">
+                        Master's Student · UESTC
+                    </p>
+
+                    <h1>
+                        Arefin Islam
+                        <span>Ramin</span>
+                    </h1>
+
+                    <p class="hero-role">
+                        Software Engineering graduate exploring
+                        artificial intelligence, machine learning
+                        and signal processing.
+                    </p>
+
+                    <p class="hero-description">
+
+                        I am currently pursuing my master's studies
+                        at the University of Electronic Science and
+                        Technology of China. My background is in
+                        software engineering, and my current academic
+                        interests are centered around intelligent data
+                        processing, machine learning and signal-based
+                        research.
+
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="#projects"
+                            class="button button-primary"
+                        >
+                            View my work
+                        </a>
+
+                        <a
+                            href="https://github.com/raminyzu"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-link"
+                        >
+                            GitHub ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-side">
+
+                    <div class="profile-image-wrapper">
+
+                        <img
+                            src="Formal Photo_passport size.jpg"
+                            alt="Portrait of Arefin Islam Ramin"
+                            class="profile-image"
+                        >
+
+                    </div>
+
+                    <div class="hero-meta">
+
+                        <p>
+                            <span>Currently</span>
+                            UESTC
+                        </p>
+
+                        <p>
+                            <span>Background</span>
+                            Software Engineering
+                        </p>
+
+                        <p>
+                            <span>Focus</span>
+                            AI · ML · Signal Processing
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ABOUT
+        ====================================================== -->
+
+        <section
+            class="section"
+            id="about"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-number">
+                        01
+                    </p>
+
+                    <div>
+
+                        <p class="section-label">
+                            About
+                        </p>
+
+                        <h2>
+                            A little about me
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-layout">
+
+                    <div class="about-main">
+
+                        <p class="large-copy">
+
+                            I started with software engineering,
+                            building applications and learning how
+                            software systems are designed. During my
+                            undergraduate studies, my interests
+                            gradually moved toward intelligent
+                            systems and data-driven research.
+
+                        </p>
+
+                        <p>
+
+                            My bachelor's thesis introduced me more
+                            deeply to biomedical signal processing,
+                            ECG signal-quality analysis and
+                            classification models. That experience
+                            became an important bridge between my
+                            software engineering background and my
+                            growing interest in artificial
+                            intelligence.
+
+                        </p>
+
+                        <p>
+
+                            I am now continuing that journey as a
+                            master's student at UESTC, developing my
+                            research foundation while continuing to
+                            build practical technical skills.
+
+                        </p>
+
+                    </div>
+
+
+                    <aside class="about-facts">
+
+                        <div>
+
+                            <span class="fact-label">
+                                Current
+                            </span>
+
+                            <p>
+                                Master's Student
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <span class="fact-label">
+                                University
+                            </span>
+
+                            <p>
+                                University of Electronic Science and
+                                Technology of China
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <span class="fact-label">
+                                Bachelor's
+                            </span>
+
+                            <p>
+                                Software Engineering
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <span class="fact-label">
+                                Languages
+                            </span>
+
+                            <p>
+                                Bengali · English · Chinese
+                            </p>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             EDUCATION
+        ====================================================== -->
+
+        <section
+            class="section section-muted"
+            id="education"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-number">
+                        02
+                    </p>
+
+                    <div>
+
+                        <p class="section-label">
+                            Education
+                        </p>
+
+                        <h2>
+                            Academic journey
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="timeline"
+                    id="educationList"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             RESEARCH
+        ====================================================== -->
+
+        <section
+            class="section"
+            id="research"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-number">
+                        03
+                    </p>
+
+                    <div>
+
+                        <p class="section-label">
+                            Research
+                        </p>
+
+                        <h2>
+                            Research direction
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="research-layout">
+
+                    <div>
+
+                        <p class="large-copy">
+
+                            My research interests are still evolving
+                            as I begin my master's studies. I am
+                            particularly interested in problems where
+                            machine learning meets signal processing
+                            and complex real-world data.
+
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="research-interests"
+                        id="researchInterests"
+                    ></div>
+
+                </div>
+
+
+                <article class="thesis">
+
+                    <div class="thesis-heading">
+
+                        <div>
+
+                            <p class="section-label">
+                                Bachelor's thesis
+                            </p>
+
+                            <h3>
+                                Design of Long-term ECG Signal
+                                Quality Annotation System and
+                                Research on Classification Model
+                            </h3>
+
+                        </div>
+
+                        <span>
+                            2026
+                        </span>
+
+                    </div>
+
+
+                    <p>
+
+                        My undergraduate thesis focused on long-term
+                        ECG signal processing, signal-quality
+                        annotation and classification. The project
+                        included an annotation-oriented software
+                        system and research into using machine
+                        learning methods for automated signal-quality
+                        classification.
+
+                    </p>
+
+
+                    <div class="thesis-tags">
+
+                        <span>ECG Signal Processing</span>
+                        <span>Machine Learning</span>
+                        <span>Deep Learning</span>
+                        <span>Classification</span>
+                        <span>Biomedical Signals</span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PROJECTS
+        ====================================================== -->
+
+        <section
+            class="section section-muted"
+            id="projects"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-number">
+                        04
+                    </p>
+
+                    <div>
+
+                        <p class="section-label">
+                            Selected work
+                        </p>
+
+                        <h2>
+                            Projects
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="projects-list"
+                    id="projectsList"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SKILLS
+        ====================================================== -->
+
+        <section
+            class="section"
+            id="skills"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-number">
+                        05
+                    </p>
+
+                    <div>
+
+                        <p class="section-label">
+                            Technical foundation
+                        </p>
+
+                        <h2>
+                            Skills & tools
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="skills-layout"
+                    id="skillsList"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ACHIEVEMENTS
+        ====================================================== -->
+
+        <section
+            class="section section-muted"
+            id="achievements"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-number">
+                        06
+                    </p>
+
+                    <div>
+
+                        <p class="section-label">
+                            Recognition
+                        </p>
+
+                        <h2>
+                            Selected achievements
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="achievement-list"
+                    id="achievementList"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CONTACT
+        ====================================================== -->
+
+        <section
+            class="section contact-section"
+            id="contact"
+        >
+
+            <div class="container">
+
+                <div class="contact-layout">
+
+                    <div>
+
+                        <p class="section-label">
+                            Contact
+                        </p>
+
+                        <h2>
+                            Let's connect.
+                        </h2>
+
+                        <p>
+
+                            I am always interested in learning,
+                            exchanging ideas and connecting with
+                            people working in software engineering,
+                            artificial intelligence and research.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-links">
+
+                        <a
+                            href="mailto:arefinraminz@gmail.com"
+                        >
+                            Email
+                            <span>↗</span>
+                        </a>
+
+                        <a
+                            href="https://github.com/raminyzu"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                            <span>↗</span>
+                        </a>
+
+                        <a
+                            href="https://linkedin.com/in/arefin-raminz"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LinkedIn
+                            <span>↗</span>
+                        </a>
+
+                        <a
+                            href="./CV of Arefin Islam Ramin.pdf"
+                            target="_blank"
+                        >
+                            Resume
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="container footer-layout">
+
+            <p>
+                © <span id="currentYear"></span>
+                Arefin Islam Ramin
+            </p>
+
+            <a href="#home">
+                Back to top ↑
+            </a>
+
         </div>
-      </div>
 
-      <hr style="margin:20px 0;border:none;height:1px;background:rgba(255,255,255,.08);">
+    </footer>
 
-      <h4 style="margin-bottom:12px;">Relevant Coursework</h4>
-      <div>
-        <span class="skill">Software Architecture</span>
-        <span class="skill">Software Engineering</span>
-        <span class="skill">Database Systems</span>
-        <span class="skill">Operating Systems</span>
-        <span class="skill">Computer Networks</span>
-        <span class="skill">Algorithms & Data Structures</span>
-        <span class="skill">Software Quality Assurance</span>
-        <span class="skill">Software Requirements Engineering</span>
-        <span class="skill">Project Management</span>
-        <span class="skill">Machine Learning</span>
-      </div>
-    </div>
 
-    
-    <div class="card" style="margin-top: 16px;">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:20px;">
-        <div>
-          <h3>Higher Secondary Certificate (Science Group)</h3>
-          <p style="color:#94a3b8;margin-top:6px;">
-            Chittagong Port College
-          </p>
-        </div>
-        <div style="text-align:right;">
-          <p><strong>2018 – 2020</strong></p>
-        </div>
-      </div>
-    </div>
 
-    
-    <div class="card" style="margin-top: 16px;">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:20px;">
-        <div>
-          <h3>Secondary School Certificate (Science Group)</h3>
-          <p style="color:#94a3b8;margin-top:6px;">
-            Academy Laboratory School
-          </p>
-        </div>
-        <div style="text-align:right;">
-          <p><strong>2013 – 2018</strong></p>
-        </div>
-      </div>
-    </div>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
 
-  
-    <div class="card" style="margin-top: 16px;">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:20px;">
-        <div>
-          <h3>Primary School Certificate</h3>
-          <p style="color:#94a3b8;margin-top:6px;">
-            Lucent Lion Tutorial
-          </p>
-        </div>
-        <div style="text-align:right;">
-          <p><strong>2006 – 2012</strong></p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section id="experience" class="section">
-<div class="container">
-
-<h2>Leadership & Experience</h2>
-
-<div class="grid-2">
-
-<div class="card">
-<h3>President Advisor</h3>
-<p style="color:#38bdf8;margin-bottom:10px;">
-Leo Club of Chittagong Karnaphuli Elite | 2024 – 2025
-</p>
-
-<p>
-Provided strategic guidance for club activities, leadership development, community service initiatives, and event planning. Assisted executive members in organizing social impact projects and volunteer programs.
-</p>
-</div>
-<div class="card">
-<h3>Treasurer</h3>
-<p style="color:#38bdf8;margin-bottom:10px;">
-Kattali Youth Council | 2022 – 2023
-</p>
-
-<p>
-Managed organizational finances, maintained budget records, monitored expenses, and supported the planning and execution of community development initiatives. Collaborated with executive members to ensure effective financial management of events and activities.
-</p>
-</div>
-<div class="card">
-<h3>Assistant Organizing Secretary</h3>
-<p style="color:#38bdf8;margin-bottom:10px;">
-Cubing Chittagong | 2019 – Present
-</p>
-
-<p>
-Supported event management, participant coordination, competition organization, and community engagement activities for speedcubing enthusiasts in Chattogram.
-</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section id="skills" class="section">
-<div class="container">
-
-<h2>Technical Skills</h2>
-
-<div class="grid-3">
-
-<div class="card">
-<h3>💻 Backend Development</h3>
-<br>
-<span class="skill">Python</span>
-<span class="skill">Django</span>
-<span class="skill">Java</span>
-<span class="skill">JSP</span>
-<span class="skill">Servlet</span>
-<span class="skill">ASP.NET</span>
-<span class="skill">Node.js</span>
-<span class="skill">REST API</span>
-</div>
-
-<div class="card">
-<h3>🎨 Frontend Development</h3>
-<br>
-<span class="skill">HTML5</span>
-<span class="skill">CSS3</span>
-<span class="skill">JavaScript</span>
-<span class="skill">Responsive Design</span>
-</div>
-
-<div class="card">
-<h3>🗄 Database Systems</h3>
-<br>
-<span class="skill">MySQL</span>
-<span class="skill">PostgreSQL</span>
-<span class="skill">SQL</span>
-<span class="skill">JDBC</span>
-<span class="skill">Database Design</span>
-</div>
-
-<div class="card">
-<h3>🤖 AI & Machine Learning</h3>
-<br>
-<span class="skill">Machine Learning</span>
-<span class="skill">Deep Learning</span>
-<span class="skill">PyTorch</span>
-<span class="skill">TensorFlow</span>
-<span class="skill">Scikit-Learn</span>
-<span class="skill">ECG Signal Processing</span>
-</div>
-
-<div class="card">
-<h3>📱 Mobile Development</h3>
-<br>
-<span class="skill">Flutter</span>
-<span class="skill">Dart</span>
-</div>
-
-<div class="card">
-<h3>⚙ Tools & Technologies</h3>
-<br>
-<span class="skill">Git</span>
-<span class="skill">GitHub</span>
-<span class="skill">VS Code</span>
-<span class="skill">Eclipse</span>
-<span class="skill">IntelliJ IDEA</span>
-<span class="skill">Qt Creator</span>
-<span class="skill">PyCharm</span>
-<span class="skill">Cisco</span>
-</div>
-
-<div class="card">
-<h3>🖥 Programming Languages</h3>
-<br>
-<span class="skill">Python</span>
-<span class="skill">Java</span>
-<span class="skill">C</span>
-<span class="skill">C++</span>
-<span class="skill">C#</span>
-<span class="skill">JavaScript</span>
-<span class="skill">Dart</span>
-<span class="skill">SQL</span>
-</div>
-
-<div class="card">
-<h3>🎨 Design & Multimedia</h3>
-<br>
-<span class="skill">Canva</span>
-<span class="skill">Figma</span>
-<span class="skill">Illustrator</span>
-<span class="skill">Poster Design</span>
-<span class="skill">Banner Design</span>
-<span class="skill">Video Editing</span>
-</div>
-
-<div class="card">
-<h3>🌐 Languages</h3>
-<br>
-<span class="skill">Bengali</span>
-<span class="skill">English</span>
-<span class="skill">Chinese</span>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section class="section">
-<div class="container">
-
-<h2>Highlights</h2>
-
-<div class="grid-3">
-
-<div class="card" style="text-align:center;">
-<h3>🏆 National Award Winner</h3>
-<p>China Collegiate Computing Design Competition</p>
-</div>
-
-<div class="card" style="text-align:center;">
-<h3>🎓 International Graduate</h3>
-<p>Software Engineering, Yangzhou University</p>
-</div>
-
-<div class="card" style="text-align:center;">
-<h3>🔬 AI Researcher</h3>
-<p>Biomedical Signal Processing & Deep Learning</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section id="projects" class="section">
-<div class="container">
-
-<h2>Featured Projects</h2>
-
-<div class="grid-2">
-
-<!-- BongoChat -->
-
-<div class="card">
-<h3>💬 BongoChat</h3>
-
-<p style="color:#94a3b8;margin:12px 0;">
-Real-time communication platform developed through collaborative teamwork.
-</p>
-
-<div style="margin-bottom:15px;">
-<span class="skill">Team Project</span>
-<span class="skill">Backend Development</span>
-<span class="skill">Brand Design</span>
-</div>
-
-<ul style="padding-left:20px;">
-<li>Worked as Assistant Backend Developer.</li>
-<li>Contributed to backend implementation and system functionality.</li>
-<li>Designed the project logo and visual branding materials.</li>
-<li>Managed media content and promotional assets.</li>
-<li>Collaborated with team members throughout development.</li>
-</ul>
-
-</div>
-
-<!-- Shonirbhor -->
-
-<div class="card">
-<h3>🛠 Shonirbhor</h3>
-
-<p style="color:#94a3b8;margin:12px 0;">
-Marketplace platform connecting customers with local service providers.
-</p>
-
-<div style="margin-bottom:15px;">
-<span class="skill">Team Project</span>
-<span class="skill">Backend Development</span>
-<span class="skill">Media Management</span>
-</div>
-
-<ul style="padding-left:20px;">
-<li>Worked as Assistant Backend Developer.</li>
-<li>Participated in system development and functionality planning.</li>
-<li>Designed project logo and branding materials.</li>
-<li>Managed social media and project promotional content.</li>
-<li>Supported collaboration and project coordination.</li>
-</ul>
-
-</div>
-
-<!-- Food Delivery -->
-
-<div class="card">
-<h3>🍔 Food Delivery Management System</h3>
-
-<p style="color:#94a3b8;margin:12px 0;">
-Full-stack web application developed independently using Django and MySQL.
-</p>
-
-<div style="margin-bottom:15px;">
-<span class="skill">Python</span>
-<span class="skill">Django</span>
-<span class="skill">MySQL</span>
-<span class="skill">Individual Project</span>
-</div>
-
-<ul style="padding-left:20px;">
-<li>User authentication and account management.</li>
-<li>Restaurant and menu management system.</li>
-<li>Shopping cart and order processing functionality.</li>
-<li>Admin dashboard for monitoring operations.</li>
-<li>Database-driven backend architecture.</li>
-</ul>
-
-</div>
-
-<!-- ECG -->
-
-<div class="card">
-<h3>🫀 ECG Signal Annotation & Classification System</h3>
-
-<p style="color:#94a3b8;margin:12px 0;">
-Research and software project focused on biomedical signal analysis using artificial intelligence.
-</p>
-
-<div style="margin-bottom:15px;">
-<span class="skill">PyQt5</span>
-<span class="skill">PyTorch</span>
-<span class="skill">Deep Learning</span>
-<span class="skill">Research Project</span>
-</div>
-
-<ul style="padding-left:20px;">
-<li>Developed ECG annotation software platform.</li>
-<li>Processed 11,983 ECG signal samples.</li>
-<li>Designed a customized 1D ResNet classification model.</li>
-<li>Applied biomedical signal processing techniques.</li>
-<li>Achieved 95.83% classification accuracy.</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section class="section">
-<div class="container">
-
-<div class="grid-4">
-
-<div class="card" style="text-align:center;">
-<h2 class="gradient">10+</h2>
-<p>Projects Completed</p>
-</div>
-
-<div class="card" style="text-align:center;">
-<h2 class="gradient">4</h2>
-<p>Featured Projects</p>
-</div>
-
-<div class="card" style="text-align:center;">
-<h2 class="gradient">11,983</h2>
-<p>ECG Samples Processed</p>
-</div>
-
-<div class="card" style="text-align:center;">
-<h2 class="gradient">95.83%</h2>
-<p>Research Accuracy</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section id="research" class="section">
-<div class="container">
-
-<h2>Research & Thesis</h2>
-
-<div class="card">
-
-<h3>
-🫀 Design of ECG Signal Quality Annotation System and Research on Classification Model
-</h3>
-
-<p style="margin-top:15px;color:#94a3b8;">
-Bachelor's Thesis | Yangzhou University | 2026
-</p>
-
-<p style="margin-top:20px;">
-This research focuses on developing an intelligent ECG signal annotation and classification system for assisting cardiovascular disease analysis. The project combines software engineering, biomedical signal processing, and deep learning to create a complete pipeline from data annotation to automatic ECG quality classification.
-</p>
-
-<div style="margin-top:20px;">
-<span class="skill">Deep Learning</span>
-<span class="skill">PyTorch</span>
-<span class="skill">PyQt5</span>
-<span class="skill">1D ResNet50</span>
-<span class="skill">Biomedical AI</span>
-<span class="skill">ECG Signal Processing</span>
-<span class="skill">Healthcare Technology</span>
-</div>
-
-<hr style="margin:25px 0;border:none;height:1px;background:rgba(255,255,255,.08);">
-
-<h4>Research Objectives</h4>
-
-<ul style="padding-left:20px;margin-top:10px;">
-<li>Develop a visual ECG signal annotation platform for expert labeling.</li>
-<li>Construct a high-quality ECG signal dataset.</li>
-<li>Adapt ResNet50 architecture for one-dimensional ECG signals.</li>
-<li>Develop an automatic ECG quality classification model.</li>
-<li>Improve intelligent healthcare analysis through AI-driven automation.</li>
-</ul>
-
-<hr style="margin:25px 0;border:none;height:1px;background:rgba(255,255,255,.08);">
-
-<h4>Key Contributions</h4>
-
-<ul style="padding-left:20px;margin-top:10px;">
-<li>Designed and implemented a complete ECG annotation system using PyQt5.</li>
-<li>Constructed a dataset containing 11,983 annotated ECG samples.</li>
-<li>Processed ECG segments consisting of 5,000 data points per sample.</li>
-<li>Applied Z-score normalization for signal standardization.</li>
-<li>Developed a customized 1D ResNet50 classification model.</li>
-<li>Implemented AdamW optimization and Cosine Annealing learning-rate scheduling.</li>
-</ul>
-
-<hr style="margin:25px 0;border:none;height:1px;background:rgba(255,255,255,.08);">
-
-<h4>Results</h4>
-
-<div class="grid-3" style="margin-top:20px;">
-
-<div class="card" style="text-align:center;">
-<h2 class="gradient">11,983</h2>
-<p>Annotated ECG Samples</p>
-</div>
-
-<div class="card" style="text-align:center;">
-<h2 class="gradient">5000</h2>
-<p>Data Points per Sample</p>
-</div>
-
-<div class="card" style="text-align:center;">
-<h2 class="gradient">95.8%</h2>
-<p>Classification Accuracy</p>
-</div>
-
-</div>
-
-<hr style="margin:25px 0;border:none;height:1px;background:rgba(255,255,255,.08);">
-
-<div class="card" style="margin-top:24px;">
-
-<h3>Research Interests</h3>
-
-<div style="margin-top:15px;">
-
-<span class="skill">Artificial Intelligence</span>
-<span class="skill">Machine Learning</span>
-<span class="skill">Deep Learning</span>
-<span class="skill">Biomedical Informatics</span>
-<span class="skill">Healthcare AI</span>
-<span class="skill">Software Engineering</span>
-<span class="skill">Data Science</span>
-<span class="skill">Signal Processing</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section id="achievements" class="section">
-<div class="container">
-
-<h2>Achievements & Awards</h2>
-
-<div class="grid-2">
-
-<!-- CCCDC -->
-
-<div class="card">
-<h3>🏆 National Second Prize</h3>
-
-<p style="color:#38bdf8;margin:10px 0;">
-17th China Collegiate Computing Design Competition (CCCDC) – International Student Sinology Track
-</p>
-
-<p>
-Won National Second Prize, Provincial Second Prize, and University First Prize with the project <strong>"Chaohuo East: Intelligent Chinese Language Exchange Platform"</strong>.
-</p>
-
-<div style="margin:15px 0;">
-<span class="skill">Artificial Intelligence</span>
-<span class="skill">Django</span>
-<span class="skill">BERT</span>
-<span class="skill">PostgreSQL</span>
-<span class="skill">Full Stack</span>
-</div>
-
-<h4 style="margin-top:15px;">My Contributions</h4>
-
-<ul style="padding-left:20px;margin-top:10px;">
-<li>Collected and cleaned a 76,000-entry Chinese poetry dataset using Python and Pandas.</li>
-<li>Performed data preprocessing for AI model training.</li>
-<li>Assisted in training the BERT-based poetry generation model.</li>
-<li>Participated in backend API development and system integration.</li>
-<li>Supported testing, deployment, and competition presentation.</li>
-</ul>
-
-</div>
-
-<!-- Sound of Spring -->
-
-<div class="card">
-<h3>🥇 First Prize</h3>
-
-<p style="color:#38bdf8;margin:10px 0;">
-Sound of Spring Cultural Festival
-</p>
-
-<p>
-Won First Prize as a member of Team MixBuzz during a university cultural competition, demonstrating teamwork, creativity, and presentation skills.
-</p>
-
-<div style="margin-top:15px;">
-<span class="skill">Teamwork</span>
-<span class="skill">Creativity</span>
-<span class="skill">Communication</span>
-</div>
-
-</div>
-
-<!-- COVID Recognition -->
-
-<div class="card">
-<h3>📜 COVID-19 Warrior Recognition</h3>
-
-<p style="color:#38bdf8;margin:10px 0;">
-Government of Bangladesh
-</p>
-
-<p>
-Received official recognition for contribution and support during the national COVID-19 vaccination campaign.
-</p>
-
-<div style="margin-top:15px;">
-<span class="skill">Volunteer Service</span>
-<span class="skill">Community Impact</span>
-<span class="skill">Public Health Support</span>
-</div>
-
-</div>
-
-<!-- Competition Summary -->
-
-<div class="card">
-<h3>🌟 Competitive Highlights</h3>
-
-<ul style="padding-left:20px;">
-<li>National Second Prize – CCCDC 2024</li>
-<li>Provincial Second Prize – CCCDC 2024</li>
-<li>University First Prize – CCCDC Selection Round</li>
-<li>First Prize – Sound of Spring Festival</li>
-<li>Government Recognition – COVID-19 Warrior</li>
-</ul>
-
-<div style="margin-top:15px;">
-<span class="skill">AI</span>
-<span class="skill">Research</span>
-<span class="skill">Software Engineering</span>
-<span class="skill">Leadership</span>
-</div>
-
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section class="section">
-<div class="container">
-
-<h2>Journey</h2>
-
-<div class="card">
-
-<p><strong>2022</strong> — Started B.Sc. Software Engineering at Yangzhou University</p>
-
-<hr style="margin:15px 0;border:none;height:1px;background:rgba(255,255,255,.08);">
-
-<p><strong>2022-2023</strong> — Treasurer, Kattali Youth Council</p>
-
-<hr style="margin:15px 0;border:none;height:1px;background:rgba(255,255,255,.08);">
-
-<p><strong>2024</strong> — CCCDC University First Prize</p>
-
-<hr style="margin:15px 0;border:none;height:1px;background:rgba(255,255,255,.08);">
-
-<p><strong>2024</strong> — CCCDC Provincial Second Prize</p>
-
-<hr style="margin:15px 0;border:none;height:1px;background:rgba(255,255,255,.08);">
-
-<p><strong>2024</strong> — CCCDC National Second Prize</p>
-
-<hr style="margin:15px 0;border:none;height:1px;background:rgba(255,255,255,.08);">
-
-<p><strong>2024</strong> — President Advisor, Leo Club</p>
-
-<hr style="margin:15px 0;border:none;height:1px;background:rgba(255,255,255,.08);">
-
-<p><strong>2025-2026</strong> — ECG AI Research & Thesis Development</p>
-
-<hr style="margin:15px 0;border:none;height:1px;background:rgba(255,255,255,.08);">
-
-<p><strong>2026</strong> — Graduated with B.Sc. in Software Engineering</p>
-
-</div>
-
-</div>
-</section>
-
-<section id="contact" class="section">
-<div class="container">
-
-<h2>Let's Connect</h2>
-
-<div class="grid-2">
-
-<div class="card">
-
-<h3>Contact Information</h3>
-
-<p style="margin-top:15px;">
-📧 <strong>Email:</strong><br>
-arefinraminz@gmail.com
-</p>
-
-<p style="margin-top:15px;">
-📱 <strong>Phone:</strong><br>
-+86 18252712143
-</p>
-
-<p style="margin-top:15px;">
-📍 <strong>Location:</strong><br>
-Yangzhou, Jiangsu, China
-</p>
-
-<p style="margin-top:15px;">
-🎓 <strong>Degree:</strong><br>
-B.Sc. Software Engineering, Yangzhou University
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Professional Profiles</h3>
-
-<div style="margin-top:20px;display:flex;flex-direction:column;gap:15px;">
-
-<a href="https://linkedin.com/in/arefin-raminz"
-target="_blank"
-class="btn secondary">
-LinkedIn
-</a>
-
-<a href="https://github.com/raminyzu"
-target="_blank"
-class="btn secondary">
-GitHub
-</a>
-
-<a href="https://scholar.google.com/citations?hl=en&user=sivz6Z8AAAAJ"
-target="_blank"
-class="btn secondary">
-Google Scholar
-</a>
-
-<a href="./CV of Arefin Islam Ramin.pdf"
-target="_blank"
-class="btn primary">
-Download Resume
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-</section>
-
-<footer>
-
-<p>
-© 2025 MD Arefin Islam Ramin
-</p>
-
-<p style="margin-top:10px;color:#64748b;">
-Software Engineer • Backend Developer • AI Research Enthusiast
-</p>
-
-</footer>
 </body>
+
 </html>
